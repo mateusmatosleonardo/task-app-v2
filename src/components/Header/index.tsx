@@ -1,10 +1,14 @@
 import React from 'react';
 import * as S from './styles';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  children: React.ReactNode
+}
+
+const Header = ({children}: HeaderProps) => {
     return (
       <S.Container>
-        
+        {children}
       </S.Container>
     )
 }
