@@ -15,8 +15,9 @@ export default function Routes(){
           drawerActiveTintColor: '#ffffff',
           drawerInactiveTintColor: '#000',
           drawerActiveBackgroundColor: '#FF4848'}}>
-        <Drawer.Screen name="Home" component={Home}/>
-        <Drawer.Screen name="Details" component={Details}/>
+        <Drawer.Screen name="Tarefas" component={Home}/>
+        <Drawer.Screen name="Perfil" component={Details}/>
+        <Drawer.Screen name="Atividades" component={Details}/>
       </Drawer.Navigator>
     </NavigationContainer>
   )
