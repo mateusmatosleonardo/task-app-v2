@@ -2,12 +2,12 @@ import React from "react";
 import { Text } from "react-native";
 import * as S from './styles';
 
-const Home: React.FC = () => {
+const Details: React.FC = () => {
   return (
     <S.Container>
-      <Text>Home</Text>
+      <Text style={{color: '#222'}}>Details</Text>
     </S.Container>
   )
 }
 
-export default Home;
+export default Details;
