@@ -10,6 +10,7 @@ import CustomDrawer from "../components/CustomDrawer";
 
 const Drawer = createDrawerNavigator();
 
+
 export default function Routes(){
   return (
     <NavigationContainer>
@@ -18,7 +19,7 @@ export default function Routes(){
         screenOptions={{headerShown: false, 
           drawerActiveTintColor: '#ffffff',
           drawerInactiveTintColor: '#000',
-          drawerActiveBackgroundColor: '#FF4848',
+          drawerActiveBackgroundColor: 'rgba(245, 137, 102, 0.8)',
           }}>
         <Drawer.Screen name="Tarefas" component={Home} options={{drawerIcon: ({color}) => (
           <Clipboard name="clipboard" color={color} size={20} style={{marginRight: -20}}/>
