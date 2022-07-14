@@ -29,3 +29,5 @@ export const CreationDate = styled.Text`
     color: #B7B7B7;
 `};
 `;
+
+export const TouchNavigation = styled.TouchableOpacity``;

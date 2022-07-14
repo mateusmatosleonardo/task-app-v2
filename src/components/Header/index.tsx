@@ -3,11 +3,12 @@ import * as S from './styles';
 
 interface HeaderProps {
   children: React.ReactNode
+  style?: any;
 }
 
-const Header = ({children}: HeaderProps) => {
+const Header = ({children, style}: HeaderProps) => {
     return (
-      <S.Container>
+      <S.Container style={style}>
         {children}
       </S.Container>
     )

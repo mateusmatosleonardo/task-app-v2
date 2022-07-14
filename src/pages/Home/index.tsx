@@ -4,17 +4,20 @@ import Header from "../../components/Header";
 import Bell from '@expo/vector-icons/Feather';
 import Me from '../../assets/me.jpg';
 import Task from "../../components/Task";
-import { DrawerActions, NavigationProp } from "@react-navigation/native";
+import { DrawerActions, useNavigation } from "@react-navigation/native";
 import { tasks } from "../../mocks/tasks";
 import { ListRenderItemInfo } from 'react-native';
 import { TaskProps } from "../../components/Task/types";
+import { HomeScreenProps } from "./types";
 
 const Home: React.FC = ({navigation}: any) => {
+
+  const navigator = useNavigation<HomeScreenProps>();
 
   navigation.dispatch(DrawerActions.openDrawer());
 
   function renderItem({item}: ListRenderItemInfo<TaskProps>){
-    return <Task {...item} />
+    return <Task {...item} onPress={() => navigator.navigate('Details')}/>
   }
 
   return (
