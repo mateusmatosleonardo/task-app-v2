@@ -3,6 +3,7 @@ import * as S from './styles';
 import Header from "../../components/Header";
 import Bell from '@expo/vector-icons/Feather';
 import Me from '../../assets/me.jpg';
+import Task from "../../components/Task";
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <S.Title>
         Minhas tarefas
       </S.Title>
+      <Task title="Aprender fluxos UI" creationDate="2d"/>
     </S.Container>
   )
 }
