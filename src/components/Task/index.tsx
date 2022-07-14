@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from './styles';
-import { TaskProps } from "./type";
+import { TaskProps } from "./types";
 
 const Task = ({title, creationDate}: TaskProps) => {
   return (

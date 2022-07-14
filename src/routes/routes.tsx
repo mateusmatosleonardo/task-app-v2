@@ -14,7 +14,7 @@ const Drawer = createDrawerNavigator();
 export default function Routes(){
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home" 
+      <Drawer.Navigator initialRouteName="Home"
         drawerContent={props => <CustomDrawer {...props} />}
         screenOptions={{headerShown: false, 
           drawerActiveTintColor: '#ffffff',

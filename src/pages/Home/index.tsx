@@ -4,20 +4,39 @@ import Header from "../../components/Header";
 import Bell from '@expo/vector-icons/Feather';
 import Me from '../../assets/me.jpg';
 import Task from "../../components/Task";
+import { DrawerActions, NavigationProp } from "@react-navigation/native";
+import { tasks } from "../../mocks/tasks";
+import { ListRenderItemInfo } from 'react-native';
+import { TaskProps } from "../../components/Task/types";
 
-const Home: React.FC = () => {
+const Home: React.FC = ({navigation}: any) => {
+
+  navigation.dispatch(DrawerActions.openDrawer());
+
+  function renderItem({item}: ListRenderItemInfo<TaskProps>){
+    return <Task {...item} />
+  }
+
   return (
     <S.Container>
       <Header>
         <S.Profile>
-          <S.PhotoProfile source={Me} resizeMode="contain" />
+          <S.TouchDrawer activeOpacity={1} onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+            <S.PhotoProfile source={Me} resizeMode="contain" />
+          </S.TouchDrawer>
         </S.Profile>
         <Bell name="bell" size={22} color={'#313030'}/>
       </Header>
       <S.Title>
         Minhas tarefas
       </S.Title>
-      <Task title="Aprender fluxos UI" creationDate="2d"/>
+      <S.ListTasks
+        overScrollMode="never"
+        showsVerticalScrollIndicator={false}
+        data={tasks} 
+        keyExtractor={(item: any) => item.title}
+        renderItem={renderItem}
+      />
     </S.Container>
   )
 }

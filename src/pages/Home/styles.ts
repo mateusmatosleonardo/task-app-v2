@@ -11,6 +11,10 @@ export const Container = styled.View`
   `}
 `;
 
+export const TouchDrawer = styled.TouchableOpacity`
+  
+`;
+
 export const Profile = styled.View`
   width: 60px;
   height: 60px;
@@ -29,4 +33,8 @@ export const Title = styled.Text`
     font-size: ${RFValue(21)}px;
     margin-top: ${RFValue(21)}px;
   `};
+`;
+
+export const ListTasks = styled.FlatList`
+  margin-top: 20px;
 `;

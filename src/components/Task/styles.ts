@@ -8,6 +8,7 @@ export const ContainerTask = styled.View`
     justify-content: space-between;
     align-items: center;
     padding: ${RFValue(12)}px;
+    margin-bottom: 10px;
     border-radius: 6px;
     background-color: ${theme.colors.white};
 `};
