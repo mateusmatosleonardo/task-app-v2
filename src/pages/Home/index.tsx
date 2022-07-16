@@ -6,18 +6,16 @@ import Me from '../../assets/me.jpg';
 import Task from "../../components/Task";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import { tasks } from "../../mocks/tasks";
-import { ListRenderItemInfo } from 'react-native';
+import { ListRenderItemInfo, Text } from 'react-native';
 import { TaskProps } from "../../components/Task/types";
 import { HomeScreenProps } from "./types";
 
-const Home: React.FC = ({navigation}: any) => {
+const Home: React.FC = ({ navigation }: any) => {
 
   const navigator = useNavigation<HomeScreenProps>();
 
-  navigation.dispatch(DrawerActions.openDrawer());
-
-  function renderItem({item}: ListRenderItemInfo<TaskProps>){
-    return <Task {...item} onPress={() => navigator.navigate('Details')}/>
+  function renderItem({ item }: ListRenderItemInfo<TaskProps>) {
+    return <Task {...item} onPress={() => navigator.navigate('Details')} />
   }
 
   return (
@@ -28,15 +26,17 @@ const Home: React.FC = ({navigation}: any) => {
             <S.PhotoProfile source={Me} resizeMode="contain" />
           </S.TouchDrawer>
         </S.Profile>
-        <Bell name="bell" size={22} color={'#313030'}/>
+        <Bell name="bell" size={22} color={'#313030'} />
+
       </Header>
       <S.Title>
         Minhas tarefas
       </S.Title>
+      {/* <Text style={{ color: '#222' }}>{dataTask}</Text> */}
       <S.ListTasks
         overScrollMode="never"
         showsVerticalScrollIndicator={false}
-        data={tasks} 
+        data={tasks}
         keyExtractor={(item: any) => item.title}
         renderItem={renderItem}
       />
