@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
+import { Platform } from "react-native";
 
 export const Container = styled.View`
   ${({theme}) => css`
     flex: 1;
-    padding-top: 30px;
+    padding-top: ${Platform.OS === 'ios' ? 50 : 30}px;
     padding-start: 20px;
     padding-end: 20px
     background-color: ${theme.colors.primary};
@@ -23,7 +24,7 @@ export const Profile = styled.View`
 export const PhotoProfile = styled.Image`
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 50px;
 `;
 
 export const Title = styled.Text`

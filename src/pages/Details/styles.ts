@@ -46,3 +46,5 @@ export const ContentTask = styled.Text`
     padding-bottom: 40px;
   `};
 `;
+
+export const TouchEvent = styled.TouchableOpacity``;

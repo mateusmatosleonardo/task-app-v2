@@ -1,22 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from './styles';
 import Header from "../../components/Header";
 import Bell from '@expo/vector-icons/Feather';
 import Me from '../../assets/me.jpg';
 import Task from "../../components/Task";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
-import { tasks } from "../../mocks/tasks";
-import { ListRenderItemInfo, Text } from 'react-native';
+import { ListRenderItemInfo } from 'react-native';
 import { TaskProps } from "../../components/Task/types";
-import { HomeScreenProps } from "./types";
 
 const Home: React.FC = ({ navigation }: any) => {
-
-  const navigator = useNavigation<HomeScreenProps>();
-
-  function renderItem({ item }: ListRenderItemInfo<TaskProps>) {
-    return <Task {...item} onPress={() => navigator.navigate('Details')} />
-  }
 
   return (
     <S.Container>
@@ -32,14 +24,9 @@ const Home: React.FC = ({ navigation }: any) => {
       <S.Title>
         Minhas tarefas
       </S.Title>
-      {/* <Text style={{ color: '#222' }}>{dataTask}</Text> */}
-      <S.ListTasks
-        overScrollMode="never"
-        showsVerticalScrollIndicator={false}
-        data={tasks}
-        keyExtractor={(item: any) => item.title}
-        renderItem={renderItem}
-      />
+      {/* <S.ListTasks
+        
+      /> */}
     </S.Container>
   )
 }

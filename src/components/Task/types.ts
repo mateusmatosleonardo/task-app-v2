@@ -1,5 +1,6 @@
-export interface TaskProps {
+export type TaskProps = {
   title: string;
-  creationDate: string;
+  description: string;
+  creationDate?: string;
   onPress?: () => void;
 }
