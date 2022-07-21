@@ -1,4 +1,4 @@
-export interface ITask {
+export type ITask = {
   numberOfTasks: number;
   setNumberOfTasks: (numberOfTasks: number) => void;
 }

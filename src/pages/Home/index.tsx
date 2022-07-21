@@ -45,6 +45,7 @@ const Home: React.FC = ({ navigation }: any) => {
         Minhas tarefas
       </S.Title>
       <FlatList
+        contentContainerStyle={{ marginTop: 20 }}
         data={tasks}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}

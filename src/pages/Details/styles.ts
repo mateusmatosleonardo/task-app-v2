@@ -47,4 +47,21 @@ export const ContentTask = styled.Text`
   `};
 `;
 
-export const TouchEvent = styled.TouchableOpacity``;
+export const TouchEvent = styled.TouchableOpacity`
+  
+`;
+
+export const TouchDeleteTask = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 6px 18px;
+`;
+
+export const DeleteTask = styled.Text`
+  ${({theme}) => css`
+    font-family: ${theme.fonts.bold};
+    font-size: ${RFValue(20)}px;
+    color: ${theme.colors.orange};
+  `};
+`;

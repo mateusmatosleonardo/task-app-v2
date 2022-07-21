@@ -24,7 +24,7 @@ export const Profile = styled.View`
 export const PhotoProfile = styled.Image`
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 50px;
 `;
 
 export const Title = styled.Text`
