@@ -8,11 +8,11 @@ const CustomDrawer = (props: any) => {
     <S.ContainerDrawer>
       <DrawerContentScrollView {...props}>
         <S.ContainerInformation>
-          <S.PhotoProfile source={Me}/>
+          <S.PhotoProfile source={Me} />
           <S.Name>Mateus</S.Name>
           <S.NumberOfTasks>22 tarefas</S.NumberOfTasks>
         </S.ContainerInformation>
-        <DrawerItemList {...props}/>
+        <DrawerItemList {...props} />
       </DrawerContentScrollView>
     </S.ContainerDrawer>
   )

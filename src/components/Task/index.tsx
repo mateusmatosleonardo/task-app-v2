@@ -1,13 +1,13 @@
 import React from "react";
 import * as S from './styles';
-import { TaskProps } from "./types";
+import { Props } from "./types";
 
-const Task = ({ title, creationDate, onPress }: TaskProps) => {
+const Task = ({ data, action }: Props) => {
   return (
-    <S.TouchNavigation activeOpacity={0.8} onPress={onPress}>
+    <S.TouchNavigation activeOpacity={0.8} onPress={action}>
       <S.ContainerTask>
-        <S.TitleTask>{title}</S.TitleTask>
-        <S.CreationDate>{creationDate}</S.CreationDate>
+        <S.TitleTask>{data.title}</S.TitleTask>
+        <S.CreationDate>{data.creationDate}</S.CreationDate>
       </S.ContainerTask>
     </S.TouchNavigation>
   )

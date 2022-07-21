@@ -4,11 +4,12 @@ import * as S from './styles';
 import Header from "../../components/Header";
 import Arrow from '@expo/vector-icons/Feather';
 import { useRoute } from "@react-navigation/native";
+import { RouteParams } from "./types";
 
 const Details: React.FC = () => {
 
   const routes = useRoute();
-  const { item } = routes.params as any;
+  const { title, description } = routes.params as RouteParams;
 
   return (
     <S.Container>
@@ -28,9 +29,9 @@ const Details: React.FC = () => {
         <S.InvibleView />
       </Header>
       <S.ViewTask showsVerticalScrollIndicator={false}>
-        <S.TitleTask>{item.title}</S.TitleTask>
+        <S.TitleTask>{title}</S.TitleTask>
         <S.ContentTask>
-          {item.description}
+          {description}
         </S.ContentTask>
       </S.ViewTask>
     </S.Container>

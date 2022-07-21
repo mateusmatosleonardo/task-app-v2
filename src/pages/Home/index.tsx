@@ -5,10 +5,30 @@ import Bell from '@expo/vector-icons/Feather';
 import Me from '../../assets/me.jpg';
 import Task from "../../components/Task";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
-import { ListRenderItemInfo } from 'react-native';
 import { TaskProps } from "../../components/Task/types";
+import { FlatList, ListRenderItem } from "react-native";
 
 const Home: React.FC = ({ navigation }: any) => {
+
+  const navigator = useNavigation();
+
+  const [tasks, setTasks] = useState<TaskProps[]>([
+    {
+      id: '1',
+      title: 'Estudar ...',
+      description: 'lorem ...',
+      creationDate: '2d'
+    }
+  ]);
+
+
+  function handleOpenDetails(item: TaskProps) {
+    navigator.navigate('Details', { ...item })
+  }
+
+  const renderItem:
+    ListRenderItem<TaskProps> =
+    ({ item }) => <Task data={item} action={() => handleOpenDetails(item)} />;
 
   return (
     <S.Container>
@@ -24,9 +44,11 @@ const Home: React.FC = ({ navigation }: any) => {
       <S.Title>
         Minhas tarefas
       </S.Title>
-      {/* <S.ListTasks
-        
-      /> */}
+      <FlatList
+        data={tasks}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+      />
     </S.Container>
   )
 }

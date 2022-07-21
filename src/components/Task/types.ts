@@ -1,6 +1,11 @@
 export type TaskProps = {
+  id: string;
   title: string;
-  description: string;
+  description?: string;
   creationDate?: string;
-  onPress?: () => void;
+}
+
+export type Props = {
+  data: TaskProps;
+  action?: () => void;
 }
