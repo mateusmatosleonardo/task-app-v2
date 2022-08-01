@@ -48,7 +48,7 @@ export const ContentTask = styled.Text`
 `;
 
 export const TouchEvent = styled.TouchableOpacity`
-  
+
 `;
 
 export const TouchDeleteTask = styled.TouchableOpacity`
@@ -65,3 +65,18 @@ export const DeleteTask = styled.Text`
     color: ${theme.colors.orange};
   `};
 `;
+
+export const CompleteTask = styled.Text`
+  ${({theme}) => css`
+    font-family: ${theme.fonts.bold};
+    font-size: ${RFValue(20)}px;
+    color: ${theme.colors.white};
+  `};
+`;
+
+export const Footer = styled.View`
+  margin: 0 auto;
+  background-color: #ddd;
+`;
+
+

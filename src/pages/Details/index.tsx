@@ -6,6 +6,7 @@ import Arrow from '@expo/vector-icons/Feather';
 import Trash from '@expo/vector-icons/Feather';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { RouteParams } from "./types";
+import { Button } from "../../components/Button";
 
 const Details: React.FC = () => {
   const navigation = useNavigation();
@@ -35,12 +36,23 @@ const Details: React.FC = () => {
           {description}
         </S.ContentTask>
       </S.ViewTask>
-      <S.TouchDeleteTask activeOpacity={0.6}>
-        <S.DeleteTask>
-          EXCLUIR TAREFA
-        </S.DeleteTask>
-        <Trash name="trash" size={22} color='#FF4848' style={{ marginLeft: 12 }} />
-      </S.TouchDeleteTask>
+      <S.Footer>
+        <S.TouchDeleteTask activeOpacity={0.6}>
+          <S.DeleteTask>
+            EXCLUIR TAREFA
+          </S.DeleteTask>
+          <Trash name="trash" size={22} color='#FF4848' style={{ marginLeft: 12 }} />
+        </S.TouchDeleteTask>
+        <Button
+          onPress={() => { }}
+          style={{ paddingHorizontal: 12, paddingVertical: 6 }}
+          activeOpacity={0.6}
+        >
+          <S.CompleteTask>
+            CONCLUIR TAREFA
+          </S.CompleteTask>
+        </Button>
+      </S.Footer>
     </S.Container>
   )
 }
