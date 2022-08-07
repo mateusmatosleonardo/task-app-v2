@@ -4,7 +4,7 @@ import * as S from './styles';
 
 export function Button({ style, onPress, children }: TouchableOpacityProps) {
   return (
-    <S.Container style={style} onPress={onPress}>
+    <S.Container style={style} onPress={onPress} activeOpacity={0.8}>
       {children}
     </S.Container>
   );

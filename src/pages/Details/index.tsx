@@ -7,6 +7,7 @@ import Trash from '@expo/vector-icons/Feather';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { RouteParams } from "./types";
 import { Button } from "../../components/Button";
+import { Theme } from "../../templates/theme";
 
 const Details: React.FC = () => {
   const navigation = useNavigation();
@@ -37,7 +38,7 @@ const Details: React.FC = () => {
         </S.ContentTask>
       </S.ViewTask>
       <S.Footer>
-        <S.TouchDeleteTask activeOpacity={0.6}>
+        <S.TouchDeleteTask activeOpacity={0.8}>
           <S.DeleteTask>
             EXCLUIR TAREFA
           </S.DeleteTask>
@@ -45,8 +46,16 @@ const Details: React.FC = () => {
         </S.TouchDeleteTask>
         <Button
           onPress={() => { }}
-          style={{ paddingHorizontal: 12, paddingVertical: 6 }}
-          activeOpacity={0.6}
+          style={{
+            paddingHorizontal: 12,
+            paddingVertical: 8,
+            backgroundColor: '#18B29A',
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 4,
+            marginTop: 8
+          }}
+          activeOpacity={1}
         >
           <S.CompleteTask>
             CONCLUIR TAREFA

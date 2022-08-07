@@ -39,3 +39,10 @@ export const Title = styled.Text`
 export const ListTasks = styled.FlatList`
   margin-top: 20px;
 `;
+
+export const Loading = styled.ActivityIndicator`
+  ${({theme}) => css`
+    color: ${theme.colors.black};
+    margin-top: ${RFValue(20)}px;
+  `};
+`;

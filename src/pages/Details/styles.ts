@@ -75,8 +75,10 @@ export const CompleteTask = styled.Text`
 `;
 
 export const Footer = styled.View`
-  margin: 0 auto;
-  background-color: #ddd;
+  margin-start: 40px;
+  margin-end: 40px;
+  margin-bottom: 25px;
+  padding-top: 10px;
 `;
 
 
